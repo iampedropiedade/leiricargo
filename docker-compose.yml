@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: '.'
+      args:
+        uid: ${UID}
+    container_name: ${DOCKER_NAME}_app
+    environment:
+      - APACHE_RUN_USER=#${UID}
+      - APACHE_RUN_GROUP=#${UID}
+    volumes:
+      - ./docker/apache2/sites-available:/etc/apache2/sites-available:cached
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini:cached
+      - ./application:/var/www/html
+    ports:
+      - 8121:80
+    networks:
+      - leiricargo
+
+  mysql-db:
+    image: mysql:8.4
+    environment:
+      - MYSQL_ROOT_PASSWORD=AY10XPz07Ekl4I2hsUXeIMPUFx4YkOaMDCsdIZVD0y934hHpqr6nPl5N0ANaweNV
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=ua9a3hlOnlTL0Ughgf45OfNyfn1MjfaCZ1LM38ciJtPk7tHb62b9qMgsXz9Kdx4i
+    ports:
+      - '3355:3306'
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    command: ['--mysql-native-password=ON']
+    container_name: ${DOCKER_NAME}_db
+    networks:
+      - leiricargo
+
+networks:
+  leiricargo:
