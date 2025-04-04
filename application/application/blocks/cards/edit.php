@@ -12,10 +12,6 @@ assert(isset($form, $controller, $view));
         <?php echo $form->label('subTitle', t('Section subtitle')); ?>
         <?php echo $form->text('subTitle', $controller->get('subTitle')); ?>
     </div>
-    <div class="form-group">
-        <?php echo $form->label('anchor', t('Section anchor')); ?>
-        <?php echo $form->text('anchor', $controller->get('anchor')); ?>
-    </div>
 </fieldset>
 <fieldset>
     <div class="form-group">
