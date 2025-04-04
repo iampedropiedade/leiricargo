@@ -26,14 +26,20 @@ bash:
 bash-db:
 	docker exec -it leiricargo_db bash
 
+export-db:
+	docker exec -it leiricargo_db sh -c "cd /home && mysqldump -u root -pAY10XPz07Ekl4I2hsUXeIMPUFx4YkOaMDCsdIZVD0y934hHpqr6nPl5N0ANaweNV app > app.sql" && docker cp leiricargo_db:/home/app.sql .
+
+import-db:
+	docker cp ./app.sql leiricargo_db:/home && docker exec -it leiricargo_db sh -c "cd /home && mysqldump -u root -pAY10XPz07Ekl4I2hsUXeIMPUFx4YkOaMDCsdIZVD0y934hHpqr6nPl5N0ANaweNV < ./app.sql"
+
 open:
 	open http://localhost:8121/
 
 compile-ui:
 	docker run --rm -it -v $(CURDIR):/src/ node:22 bash -c "cd /src/ui && yarn install && yarn production"
 
-composer:
-	docker exec -it --user www-data leiricargo_app sh -c "cd /var/www/html && composer install"
+composer-install:
+	docker exec -it --user www-data leiricargo_app sh -c "cd /var/www/html/application/src && composer install"
 
 doctrine:
 	docker exec -it --user www-data leiricargo_app sh -c "/var/www/html/concrete/bin/concrete5 orm:generate:proxies"

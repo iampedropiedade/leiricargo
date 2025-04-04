@@ -1,6 +1,7 @@
 <?php
 /* @var Concrete\Core\Application\Application $app */
 /* @var Concrete\Core\Console\Application $console only set in CLI environment */
+include sprintf('%s/%s/vendor/autoload.php', DIR_APPLICATION, DIRNAME_CLASSES);
 
 /*
  * ----------------------------------------------------------------------------
