@@ -1,25 +1,75 @@
-<section class="wrapper  bg-[#21262c] opacity-100  angled lower-start">
-  <div class="container pt-7 xl:pt-12 lg:pt-12 md:pt-12 pb-8">
-    <div class="row mx-0 !mt-[-50px] items-center">
-      <div class="lg:w-6/12 flex-[0_0_auto] !px-[15px] max-w-full" data-cues="slideInDown" data-group="page-title" data-delay="600">
-        <h1 class="text-[calc(1.365rem_+_1.38vw)] font-bold !leading-[1.2] xl:!text-[2.4rem] !text-white !mb-4">Sandbox focuses on <br /><span class="typer !text-[#3f78e0]  whitespace-nowrap" data-delay="100" data-words="customer satisfaction,business needs,creative ideas"></span><span class="cursor !text-[#3f78e0] " data-owner="typer"></span></h1>
-        <p class="lead text-[1.2rem] leading-normal !text-white !mb-7 md:!pr-32 xl:!pr-0 lg:!pr-0 xxl:!pr-20">We carefully consider our solutions to support each and every stage of your growth.</p>
-        <div>
-          <a class="btn btn-lg btn-primary !text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:!border-[#3f78e0]   active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] rounded">Get Started</a>
+<section class="wrapper !bg-[#ffffff]">
+    <div class="container pt-8 xl:pt-[4.5rem] lg:pt-[4.5rem] md:pt-[4.5rem]">
+        <div class="flex flex-wrap mx-[-15px] lg:mx-0 xl:mx-[-20px] !mb-7 md:!mb-10 lg:!mb-[6rem] xl:!mb-[6rem] items-center">
+            <div class="md:w-8/12 md:!ml-[16.66666667%] lg:w-6/12 lg:!ml-[8.33333333%] xl:w-6/12 xl:!ml-[8.33333333%] w-full flex-[0_0_auto] !px-[15px] lg:px-0 xl:!px-[20px] max-w-full !relative lg:!order-2 xl:!order-2"
+                 data-cue="zoomIn"
+                 data-show="true"
+                 style="animation-name: zoomIn; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                <div class="shape bg-dot primary rellax !w-[7rem] !h-[9rem] absolute z-[1] opacity-50 !bg-[radial-gradient(#3f78e0_2px,transparent_2.5px)]"
+                     data-rellax-speed="1"
+                     style="top: -1.7rem; left: -1.5rem; transform: translate3d(0px, -2px, 0px);"></div>
+                <div class="shape rounded !bg-[#edf2fc] rellax xl:block lg:block md:block absolute z-[1]"
+                     data-rellax-speed="0"
+                     style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%; transform: translate3d(0px, 0px, 0px);"></div>
+                <figure class="rounded-[0.4rem] relative z-[2]">
+                    <?php if ($backgroundImageId): ?>
+                        <?php $file = File::getByID($backgroundImageId); ?>
+                        <?php if ($file): ?>
+                            <img class="rounded-[0.4rem]" src="<?php echo $file->getURL(); ?>" alt="image">
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </figure>
+            </div>
+            <div class="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] !px-[15px] lg:px-0 xl:!px-[20px] max-w-full xl:!mt-[-2.5rem] lg:!mt-[-2.5rem] !mt-[4rem] text-center lg:text-left xl:text-left"
+                 data-cues="slideInDown"
+                 data-group="page-title"
+                 data-delay="600"
+                 data-disabled="true">
+                <h1 class="!text-[calc(1.385rem_+_1.62vw)]  !font-normal !tracking-[normal] font-DMSerif !leading-[1.1] xl:!text-[2.6rem] !mb-5"
+                    data-cue="slideInDown"
+                    data-group="page-title"
+                    data-delay="600"
+                    data-show="true"
+                    style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 600ms; animation-direction: normal; animation-fill-mode: both;">
+                    <?php echo h($title); ?>
+                </h1>
+                <p class="lead text-[1.25rem] leading-normal !mb-7 md:!px-10 lg:!px-0" data-cue="slideInDown"
+                   data-group="page-title"
+                   data-delay="600"
+                   data-show="true"
+                   style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                    <?php echo h($title); ?>
+                </p>
+                <div class="flex justify-center lg:!justify-start xl:!justify-start"
+                     data-cues="slideInDown"
+                     data-group="page-title-buttons"
+                     data-delay="900"
+                     data-cue="slideInDown"
+                     data-disabled="true"
+                     data-show="true"
+                     style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                    <span data-cue="slideInDown"
+                          data-group="page-title-buttons"
+                          data-delay="900"
+                          data-show="true"
+                          style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;">
+                        <a href="<?php echo h($buttonLink1); ?>"
+                           class="btn btn-lg btn-primary !text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:!border-[#3f78e0]   active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] !rounded-[50rem] !mr-2">
+                            <?php echo h($buttonText1); ?>
+                        </a>
+                    </span>
+                    <span data-cue="slideInDown"
+                          data-group="page-title-buttons"
+                          data-delay="900"
+                          data-show="true"
+                          style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;">
+                        <a href="<?php echo h($buttonLink2); ?>"
+                           class="btn btn-lg btn-outline-primary !rounded-[50rem]">
+                            <?php echo h($buttonText1); ?>
+                        </a>
+                    </span>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- /column -->
-      <div class="lg:w-5/12 flex-[0_0_auto] !px-[15px] max-w-full lg:!ml-[8.33333333%] !mb-[-8rem]" data-cues="slideInDown">
-        <div class="relative">
-          <a href="./assets/media/movie.mp4" class="btn btn-circle btn-primary !text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:!border-[#3f78e0]   active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] btn-play ripple !mx-auto !mb-6 absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
-          <figure class="rounded !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]"><img src="./assets/img/photos/about13.jpg" srcset="./assets/img/photos/about13@2x.jpg 2x" alt=""></figure>
-        </div>
-        <!-- /div -->
-      </div>
-      <!-- /column -->
     </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
 </section>
-<!-- /section -->

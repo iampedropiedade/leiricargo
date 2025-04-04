@@ -1,14 +1,13 @@
 /docker/mysql
 
 # Ignore concrete5 stuff
-/service/application/config/secrets.php
-/service/application/files
-/service/application/languages
-/service/sitemap.xml
+/application/application/config/secrets.php
+/application/application/files
+/application/application/languages
+/application/sitemap.xml
 
 # Ignore UI build files
-/service/application/themes/leiricargo/app
-/service/application/themes/leiricargo/assets/node_modules
+/application/application/themes/leiricargo/assets/node_modules
 /ui/node_modules
 
 # Ignore developer stuff
