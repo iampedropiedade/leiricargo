@@ -14,6 +14,11 @@ $al = new FileManager();
     </div>
 
     <div class="form-group">
+        <?php echo $form->label('subTitle', t('Sub Title (example:Subtitle1,subtitle2,etc,)')); ?>
+        <?php echo $form->text('subTitle', $controller->get('subTitle')); ?>
+    </div>
+
+    <div class="form-group">
         <?php echo $form->label('buttonText1', t('First Button Text')); ?>
         <?php echo $form->text('buttonText1', $controller->get('buttonText1')); ?>
     </div> 
@@ -46,6 +51,12 @@ $al = new FileManager();
         <?php echo $form->label('backgroundImageId', t('Background Image')); ?>
         <?php echo $al->image('backgroundImageId', 'backgroundImageId', 'Select an image', $controller->get('backgroundImageId')); ?>
     </div>
+
+    <div class="form-group">
+        <?php echo $form->label('backgroundVideoId', t('Background Video')); ?>
+        <?php echo $al->video('backgroundVideoId', 'backgroundVideoId', 'Select a Video', $controller->get('backgroundVideoId')); ?>
+    </div>
+
     <div class="form-group">
         <?php echo $form->label('content', t('Content')); ?>
         <?php echo \Core::make('editor')->outputStandardEditor('content', $controller->getContentEditMode('content')); ?>

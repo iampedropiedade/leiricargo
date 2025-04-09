@@ -3,7 +3,7 @@
     xmlns="http://www.concrete5.org/doctrine-xml/0.5"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.concrete5.org/doctrine-xml/0.5 http://concrete5.github.io/doctrine-xml/doctrine-xml-0.5.xsd">
-    <table name="btHero">
+    <table name="btportfolio">
         <field name="bID" type="integer">
             <unsigned/>
             <autoincrement/>
@@ -11,7 +11,11 @@
         <field name="backgroundImageId" type="integer">
             <unsigned/>
         </field>
+        <field name="backgroundVideoId" type="integer">
+            <unsigned/>
+        </field>
         <field name="title" type="string" size="1024" />
+        <field name="subTitle" type="string" size="1024" />
         <field name="buttonText1" type="string" size="255" />
         <field name="buttonLink1" type="string" size="255" />
         <field name="buttonText2" type="string" size="255" />

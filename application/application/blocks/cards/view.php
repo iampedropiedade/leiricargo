@@ -25,7 +25,7 @@ if(!is_array($this->controller->get('items')) || $this->controller->get('items')
             </div>
         </div>
 
-        <div class="flex flex-wrap mx-[-15px] grid-view md:mx-[-20px] lg:mx-[-20px] xl:mx-[-25px] !mt-[-40px] xl:!mt-0 lg:!mt-0">
+        <div class="flex flex-wrap mx-[-15px] grid-view md:mx-[-20px] lg:mx-[-20px] xl:mx-[-25px] !mt-[-40px] justify-center xl:!mt-0 lg:!mt-0">
             <?php foreach($this->controller->get('items') as $key=>$item) : ?>
                 <?php $this->inc('elements/view/' . $item['type'] . '.php', ['item' => $item, 'index'=>$key]); ?>
             <?php endforeach; ?>
