@@ -27,7 +27,8 @@ services:
     ports:
       - '3355:3306'
     volumes:
-      - ./docker/mysql:/var/lib/mysql
+      - ./docker/mysql:/var/lib/mysql:rw
+    user: mysql
     command: ['--mysql-native-password=ON']
     container_name: ${DOCKER_NAME}_db
     networks:
