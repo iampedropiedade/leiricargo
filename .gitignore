@@ -13,3 +13,4 @@
 # Ignore developer stuff
 *.DS_Store
 /.idea
+/app.sql
