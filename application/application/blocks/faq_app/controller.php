@@ -1,5 +1,5 @@
 <?php
-namespace Application\Block\Faq;
+namespace Application\Block\FaqApp;
 
 use Application\Blocks\Controller as BlockController;
 
@@ -8,7 +8,7 @@ class Controller extends BlockController
     public const string ITEM_TYPE_CARD = 'faq';
 
     protected $btCacheBlockOutput = false;
-    protected $btTable = 'btFaq';
+    protected $btTable = 'btFaqApp';
     protected $btInterfaceWidth = '1280';
     protected $btInterfaceHeight = '1000';
     protected $btDefaultSet = 'application';
@@ -17,7 +17,7 @@ class Controller extends BlockController
     ];
 //    apenas variaveis da view.php root
     protected $searchableFields = ['title', 'subTitle'];
-    protected $searchableSubFields = ['title', 'subtitle', 'stat'];
+    protected $searchableSubFields = ['question', 'answer'];
 
     /**
      * @return string
@@ -32,7 +32,7 @@ class Controller extends BlockController
      */
     public function getBlockTypeName()
     {
-        return t('Faq');
+        return t('FAQ - Frequently Asked Questions');
     }
 
     public function on_start()
