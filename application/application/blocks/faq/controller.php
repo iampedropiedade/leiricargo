@@ -1,20 +1,21 @@
 <?php
-namespace Application\Block\Process;
+namespace Application\Block\Faq;
 
 use Application\Blocks\Controller as BlockController;
 
 class Controller extends BlockController
 {
-    public const string ITEM_TYPE_CARD = 'process';
+    public const string ITEM_TYPE_CARD = 'faq';
 
     protected $btCacheBlockOutput = false;
-    protected $btTable = 'btProcess';
+    protected $btTable = 'btFaq';
     protected $btInterfaceWidth = '1280';
     protected $btInterfaceHeight = '1000';
     protected $btDefaultSet = 'application';
     protected $allowedSubItemTypes = [
         self::ITEM_TYPE_CARD,
     ];
+//    apenas variaveis da view.php root
     protected $searchableFields = ['title', 'subTitle'];
     protected $searchableSubFields = ['title', 'subtitle', 'stat'];
 
@@ -23,7 +24,7 @@ class Controller extends BlockController
      */
     public function getBlockTypeDescription()
     {
-        return t('Process');
+        return t('Faq');
     }
 
     /**
@@ -31,7 +32,7 @@ class Controller extends BlockController
      */
     public function getBlockTypeName()
     {
-        return t('Process');
+        return t('Faq');
     }
 
     public function on_start()
