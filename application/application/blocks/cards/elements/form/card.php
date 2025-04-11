@@ -1,9 +1,11 @@
 <?php
+
 use Concrete\Core\Application\Service\FileManager;
 use Concrete\Core\File\File;
+
 assert(isset($data, $code, $controller, $type, $form));
 
-if($data && isset($data['image_id'])) {
+if ($data && isset($data['image_id'])) {
     $image = File::getByID($data['image_id']);
 }
 
@@ -15,7 +17,7 @@ $al = new FileManager();
         <fieldset>
             <div class="form-group">
                 <?php echo $form->label('items[' . $code . '][name]', t('Nome')); ?>
-                <?php echo $form->text('items[' . $code . '][name]', $data['name'] ?? '', ['required'=>'required']); ?>
+                <?php echo $form->text('items[' . $code . '][name]', $data['name'] ?? '', ['required' => 'required']); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->label('items[' . $code . '][jobTitle]', t('Título do trabalho')); ?>

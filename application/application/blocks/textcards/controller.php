@@ -1,5 +1,4 @@
 <?php
-
 namespace Application\Block\Cards;
 
 use Application\Blocks\Controller as BlockController;

@@ -21,7 +21,7 @@ assert(isset($form, $controller, $view));
         <div class="card-item-list-block">
             <div data-target="list-container">
                 <?php if ($controller->get('items')) : ?>
-                    <?php foreach ($controller->get('items') as $key => $value) : ?>
+                    <?php foreach($controller->get('items') as $key => $value) : ?>
                         <?php echo $controller->action_load_list_item($value, false); ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
