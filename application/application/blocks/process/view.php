@@ -6,7 +6,6 @@ if(!is_array($this->controller->get('items')) || $this->controller->get('items')
     return;
 }
 ?>
-
 <section id="snippet-2" class="wrapper !bg-[#ffffff] "><!--border-b-[rgba(164,174,198,0.2)] border-b border-solid-->
     <div class="container pt-20 xl:pt-28 lg:pt-28 md:pt-28 pb-16 xl:pb-20 lg:pb-20 md:pb-20">
         <?php if($this->controller->get('title')) : ?>
