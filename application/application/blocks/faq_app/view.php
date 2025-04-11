@@ -20,7 +20,7 @@ if(!is_array($this->controller->get('items')) || $this->controller->get('items')
         <?php endif; ?>
         <div class="flex flex-wrap mx-[-15px]">
             <?php foreach($this->controller->get('items') as $key=>$item) : ?>
-                <?php $this->inc('elements/view/' . $item['type'] . '.php', ['item' => $item, 'index'=>$key]); ?>
+                <?php $this->inc('elements/view/' . $item['type'] . '.php', ['item' => $item, 'index'=>$key, 'bid'=>$this->controller->getIdentifier()]); ?>
             <?php endforeach; ?>
         </div>
         <!--/.row -->
